@@ -1,16 +1,18 @@
 {
-  "name": "friendfinder",
+  "name": "12-FriendFinder",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "test"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/alightedlamp/FriendFinder.git"
   },
-  "author": "Philip Harrell",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/alightedlamp/FriendFinder/issues"
