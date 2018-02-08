@@ -22,11 +22,5 @@ module.exports = [
     img:
       'https://img1.southernliving.timeinc.net/sites/default/files/styles/4_3_horizontal_-_1200x900/public/image/2017/10/main/vanna-white-wheel-of-fortune.jpg?itok=b3ELvjQr',
     answer: [2, 3, 5, 4, 1, 0, 1, 3, 4, 2, 5, 4]
-  },
-  {
-    name: 'Kelly White',
-    img:
-      'https://img1.southernliving.timeinc.net/sites/default/files/styles/4_3_horizontal_-_1200x900/public/image/2017/10/main/vanna-white-wheel-of-fortune.jpg?itok=b3ELvjQr',
-    answer: [2, 3, 5, 4, 1, 0, 1, 3, 4, 2, 5, 4]
   }
 ];
