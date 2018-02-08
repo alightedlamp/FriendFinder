@@ -14,7 +14,19 @@ const questions = [
 ];
 
 const showMatch = function(match) {
-  // show match
+  $('#match-modal')
+    .html(
+      `
+      <div class="modal">
+        <h3>Your match:</h3>
+        <p class="match-name">${match.name}</p>
+        <div class="match-img">
+          <img src="${match.img}"/>
+        </div>
+      </div>
+  `
+    )
+    .show();
 };
 
 questions.map(question => {
@@ -22,7 +34,8 @@ questions.map(question => {
     <div class="question mv4">
       <h3 class="f4 mv2">${question}</h3>
         <div class="option">
-          <select name="answer">
+          <select name="answer" required>
+            <option disabled selected value> -- Select an Option -- </option>
             <option value="0">Strongly Disagree</option>
             <option value="1">Disagree</option>
             <option value="2">Neutral</option>
@@ -36,8 +49,8 @@ questions.map(question => {
 });
 $('.quiz').prepend(`
   <div class="mv1">
-    <label>Name:</label> <input type="text" name="name"/><br />
-    <label>Photo:</label> <input type="text" name="photo"/>
+    <label>Name:</label> <input type="text" name="name" required/><br />
+    <label>Photo:</label> <input type="text" name="img" required/>
   </div>
 `);
 
@@ -45,4 +58,10 @@ $('.quiz').on('submit', function(e) {
   e.preventDefault();
   const answers = $(this).serializeArray();
   $.post('/api/friends', answers).done(res => showMatch(res));
+});
+$(window).click(function(e) {
+  const modal = document.getElementById('match-modal');
+  if (e.target === modal) {
+    $('#match-modal').hide();
+  }
 });
