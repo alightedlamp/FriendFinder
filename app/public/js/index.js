@@ -14,6 +14,7 @@ const questions = [
 ];
 
 const showMatch = function(match) {
+  console.log(match);
   $('#match-modal')
     .html(
       `

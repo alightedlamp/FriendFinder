@@ -17,6 +17,6 @@ module.exports = app => {
       .sort((p1, p2) => p1.score - p2.score)[0];
 
     friends.push(newFriend);
-    return res.json(match);
+    return res.json(friends.filter(friend => friend.name === match.name)[0]);
   });
 };
